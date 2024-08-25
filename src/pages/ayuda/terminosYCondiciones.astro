@@ -1,0 +1,127 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Terminos y condiciones - Onyx">
+  <Header />
+    <main class="main">
+        <div class="main-content">
+            <section>
+                <h2>Introducción</h2>
+                <p>
+                    Bienvenido a Onyx Sports. Estos términos y condiciones rigen el uso de nuestro sitio web y la compra de productos en nuestra tienda en línea. Al acceder a nuestro sitio y realizar compras, aceptas estos Términos en su totalidad. Te recomendamos leerlos detenidamente. Si no estás de acuerdo con alguno de los Términos, te pedimos que no utilices nuestro sitio.
+                </p>
+            </section>
+            <section>
+                <h2>Descripción de Productos y Marcas?</h2>
+                <p>
+                    Onyx Sports ofrece una selección de ropa deportiva de alta calidad de marcas reconocidas globalmente, como Adidas, Nike, Puma, Reebok, y otras. Todos los productos disponibles en nuestra tienda son originales y provienen directamente de fabricantes o distribuidores autorizados. Las descripciones de los productos, incluyendo imágenes, especificaciones, y tallas, son lo más precisas posible. Sin embargo, no garantizamos que las descripciones sean completamente exactas, completas, confiables, actuales o libres de errores. Si un producto ofrecido por nosotros no coincide con la descripción, tu único recurso es devolverlo sin usar.
+                </p>
+            </section>
+            <section>
+                <h2>Precios y Disponibilidad</h2>
+                <p>
+                    Todos los precios están expresados en Pesos Argentinos (ARS) y son válidos en el momento de la compra. Nos reservamos el derecho de modificar los precios en cualquier momento sin previo aviso. La disponibilidad de los productos puede cambiar sin previo aviso, y nos reservamos el derecho de limitar las cantidades de cualquier producto o rechazar cualquier pedido. En caso de que un producto esté agotado después de haber realizado tu pedido, nos comunicaremos contigo para ofrecerte una solución, que puede incluir la sustitución del producto, una espera hasta la reposición de stock, o el reembolso del importe pagado. 
+                </p>
+            </section>
+
+            <div>
+                <img src="../public/ShowMoreIcon.svg" alt="Flecha que indica hacia abajo" width="100">
+            </div>
+        </div>
+        <aside>
+            <h2>Indice</h2>
+            <ol>
+                <li>Introducción</li>
+                <li>Descripción de productos y marcas</li>
+                <li>Precios y disponibilidad</li>
+                <li>
+                    Proceso de pedido y pago
+                </li>
+                <li>Envios y entregas</li>
+                <li>Política de devoluciones y cambios</li>
+                <li>
+                    Garantias de productos
+                </li>
+                <li>Protección de datos personales</li>
+                <li>
+                    Propiedad intelectual
+                </li>
+                <li>Uso del sitio web</li>
+                <li>Limitación de responsabilidades</li>
+                <li>Modificación de los términos y condiciones</li>
+                <li>Legislación aplicable y juridicción</li>
+                <li>Contacto</li>
+            </ol>
+        </aside>
+    </main>
+  <Footer />
+</Layout>
+
+<style>
+    .main {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 5fr 1fr;
+        gap: 5.125rem;
+        width: 90%;
+        margin-top: 3.125rem;
+
+        & h2,
+        p, label {
+            color: var(--color-primary);
+        }
+
+        & .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4.3125rem;
+
+            section {
+                max-width: 735px;
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+
+                & h2 {
+                    font-size: 32px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                & p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+
+            }
+        }
+
+        & aside {
+            & h2 {
+                font-size: 32px;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 13px;
+            }
+
+            & ol {
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                min-width: 275px;
+                border: 1px solid var(--color-primary);
+                padding: 11px 5px 5px 1.875rem;
+
+                & li {
+                    font-size: 16px;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+</style>

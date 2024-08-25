@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Politica y privacidad - Onyx">
+    <Header />
+    <main class="main">
+        <div class="main-content">
+            <section>
+                <h2>Información que recopilamos</h2>
+                <ul>
+                    <li><span style="font-weight: bold;">Información Personal:</span> Esto incluye datos como tu nombre, dirección de correo electrónico, número de teléfono, dirección de envío, y detalles de pago. Esta información se recopila cuando creas una cuenta, realizas una compra, te suscribes a nuestro boletín de noticias, o te pones en contacto con nosotros</li>
+                    <li><span style="font-weight: bold;">Información de Navegación:</span> Utilizamos cookies y tecnologías similares para recopilar información sobre tu navegación en nuestro sitio web, como tu dirección IP, tipo de navegador, páginas visitadas y tiempo de permanencia. Esta información nos ayuda a mejorar la funcionalidad del sitio y personalizar tu experiencia de usuario.</li>
+                    <li><span style="font-weight: bold;">Información de Pago:</span> Cuando realizas una compra, recopilamos la información necesaria para procesar el pago, como detalles de la tarjeta de crédito, dirección de facturación, y datos bancarios. Onyx Sports no almacena la información completa de tu tarjeta de crédito; esta es procesada a través de proveedores de servicios de pago seguros.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Uso de la información</h2>
+                <ul>
+                    <li><span style="font-weight: bold;">Procesamiento de Pedidos:</span> Utilizamos tu información para procesar y enviar tus pedidos, así como para comunicarnos contigo en relación a tu compra.</li>
+                    <li><span style="font-weight: bold;">Mejora del Servicio:</span> La información de navegación nos permite analizar el comportamiento del usuario en nuestro sitio, lo que nos ayuda a mejorar la funcionalidad y el diseño de nuestra tienda en línea.</li>
+                    <li><span style="font-weight: bold;">Marketing y Comunicaciones:</span> Si te has suscrito a nuestro boletín, utilizaremos tu dirección de correo electrónico para enviarte noticias, ofertas especiales y promociones. Puedes optar por no recibir estas comunicaciones en cualquier momento haciendo clic en el enlace de "desuscribirse" en los correos electrónicos.</li>
+                    <li><span style="font-weight: bold;">Seguridad y Prevención de Fraude:</span> Utilizamos la información personal y de pago para proteger nuestras operaciones y prevenir actividades fraudulentas.</li>
+                </ul>
+            </section>
+            <div>
+                <img src="../public/ShowMoreIcon.svg" alt="Flecha que indica hacia abajo" width="100">
+            </div>
+        </div>
+        <aside>
+            <h2>Indice</h2>
+            <ol>
+                <li>Información que recopilamos</li>
+                <li>Uso de la información</li>
+                <li>Compartición de la información</li>
+                <li>Seguridad de la informatica</li>
+                <li>Tus derechos</li>
+                <li>Cookies y tegnologías similares</li>
+                <li>Enlaces a sitios de terceros</li>
+                <li>Cambios a esta Política de Privacidad</li>
+                <li>Contacto</li>
+            </ol>
+        </aside>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    .main {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 5fr 1fr;
+        gap: 5.125rem;
+        width: 90%;
+        margin-top: 3.125rem;
+
+        & h2,
+        p, label, li {
+            color: var(--color-primary);
+        }
+
+        & .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.3125rem;
+
+            section {
+                max-width: 735px;
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+
+                & h2 {
+                    font-size: 32px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                & ul {
+                    list-style: disc;
+                    padding-left: 40px;
+
+                    & li {
+                        margin: 0 0 20px 0;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        & aside {
+            & h2 {
+                font-size: 32px;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 13px;
+            }
+
+            & ol {
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                min-width: 275px;
+                border: 1px solid var(--color-primary);
+                padding: 11px 5px 5px 1.875rem;
+
+                & li {
+                    font-size: 16px;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+</style>

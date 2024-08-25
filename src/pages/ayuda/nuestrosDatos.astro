@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Nuestros datos - Onyx">
+    <Header />
+    <main class="main">
+        <section>
+            <p><span style="font-weight: bold;">Nombre comercial:</span> Onyx Sports</p>
+            <p><span style="font-weight: bold;">Razón social:</span> Onyx Sports S.R.L</p>
+            <p><span style="font-weight: bold;">Domicilio fiscal:</span> Ramón Cabrero 1751, Remedios de Escalada, Provincia de Buenos Airess</p>
+        </section>
+        <section>
+            <p><span style="font-weight: bold;">Horario de atención:</span> Lunes a viernes de 9:00 a 18:00hs</p>
+            <p><span style="font-weight: bold;">Correo electrónico:</span> onyxsports@gmail.com</p>
+            <p><span style="font-weight: bold;">Teléfono de contacto:</span> +54 11 1234-5678</p>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    .main {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 5.125rem;
+        width: 90%;
+        height: 59.8vh;
+        margin-top: 3.125rem;
+        color: var(--color-primary);
+
+        section {
+            max-width: 735px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            & p {
+                font-size: 24px;
+            }
+        }
+    }
+</style>

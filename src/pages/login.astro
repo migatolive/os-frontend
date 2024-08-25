@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Iniciar sesión - Onyx">
+  <Header />
+  <main>
+    <form action="/login" method="post">
+      <h1>Inicio de sesión</h1>
+      <label for="text">
+        <span>Nombre del usuario</span>
+        <input type="text" id="text" name="nameUser" required />
+      </label>
+      <label for="pass">
+        <span>Contraseña</span>
+        <input type="password" id="pass" name="pass" required />
+      </label>
+      <input type="submit" value="Enviar" class="btn" />
+
+      <p>¿Aun no tienes una cuenta? <a href="/register">Registrate aquí</a></p>
+    </form>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+  }
+
+  form {
+    background: var(--color-primary);
+    width: 29.875rem;
+    height: 26.6875rem;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    padding: 1.25rem;
+    margin: 0 1rem;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  input {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 24.0625rem;
+  }
+
+  input[type="submit"] {
+    width: 9.375rem;
+    height: 2.92rem;
+    background: var(--color-secundary);
+    color: var(--color-primary);
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 16px;
+    max-width: 12.8125rem;
+    text-align: center;
+  }
+
+  a {
+    color: var(--color-secundary);
+    font-weight: bold;
+  }
+</style>

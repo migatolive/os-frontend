@@ -1,0 +1,163 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Preguntas frecuentes - Onyx">
+    <Header />
+    <main class="main">
+        <div class="main-content">
+            <section>
+                <h2>¿Ofrecen ropa depotiva ecológica?</h2>
+                <p>
+                    Sí, estamos comprometidos con la sostenibilidad y ofrecemos
+                    una línea de ropa deportiva fabricada con materiales
+                    reciclados y procesos que minimizan el impacto ambiental.
+                </p>
+            </section>
+            <section>
+                <h2>¿Qué marcas de ropa deportiva ofrecen?</h2>
+                <p>
+                    En nuestra tienda ofrecemos una selección de ropa deportiva
+                    de marcas reconocidas como Adidas, Nike, Puma, Reebok, entre
+                    otras.
+                </p>
+            </section>
+            <section>
+                <h2>¿Qué métodos de pago aceptan?</h2>
+                <p>
+                    Aceptamos una variedad de métodos de pago, incluyendo
+                    tarjetas de crédito, débito y transferencias bancarias
+                </p>
+            </section>
+            <section>
+                <h2>
+                    ¿Las prendas que ofrecen son adecuadas para todo tipo de
+                    deportes?
+                </h2>
+                <p>
+                    Sí, ofrecemos una variedad de productos diseñados
+                    específicamente para diferentes deportes. Desde running y
+                    entrenamiento en gimnasio hasta deportes de equipo como
+                    fútbol y baloncesto.
+                </p>
+            </section>
+
+            <div>
+                <img src="../public/ShowMoreIcon.svg" alt="Flecha que indica hacia abajo" width="100">
+            </div>
+
+            <div class="container-input">
+                <label>¿Tienes alguna duda? Consultanos</label>
+                <input type="text">
+            </div>
+        </div>
+        <aside>
+            <h2>Indice</h2>
+            <ol>
+                <li>¿Ofrecen ropa deportiva ecológica?</li>
+                <li>¿Qué marcas de ropa deportiva ofrecen?</li>
+                <li>¿Qué métodos de pago aceptan?</li>
+                <li>
+                    ¿Las prendas que ofrecen son adecuadas para todo tipo de
+                    deportes?
+                </li>
+                <li>¿Como sé qué talla elegir en cada marca?</li>
+                <li>¿Las prendas que venden son originales?</li>
+                <li>
+                    ¿Puedo devolver o cambiar un producto si no me queda bien?
+                </li>
+                <li>¿Ofrecen descuentos en productos de marca?</li>
+                <li>
+                    ¿Cómo cuido mi ropa deportiva de marcas como Nike y Adidas?
+                </li>
+                <li>¿Realizan envíos a todo el país?</li>
+                <li>¿Puedo rastrear mi pedido?</li>
+            </ol>
+        </aside>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    .main {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 5fr 1fr;
+        gap: 5.125rem;
+        width: 90%;
+        margin-top: 3.125rem;
+
+        & h2,
+        p, label {
+            color: var(--color-primary);
+        }
+
+        & .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4.3125rem;
+
+            section {
+                max-width: 735px;
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+
+                & h2 {
+                    font-size: 32px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                & p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+
+            & .container-input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .3rem;
+
+                & label {
+                    font-size: 16px;
+                }
+
+                & input {
+                    padding: 5px 10px;
+                    width: 270px;
+                    border: none;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        & aside {
+            & h2 {
+                font-size: 32px;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 13px;
+            }
+
+            & ol {
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                min-width: 275px;
+                border: 1px solid var(--color-primary);
+                padding: 11px 5px 5px 1.875rem;
+
+                & li {
+                    font-size: 16px;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+</style>

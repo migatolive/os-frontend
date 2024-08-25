@@ -1,0 +1,88 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Reseña - Onyx">
+  <Header />
+  <main>
+    <section>
+      <form action="#" method="post">
+        <div class="stars">
+          <img src="/public/star_filled.svg" alt="Imagen de estrella" />
+          <img src="/public/star.svg" alt="Imagen de estrella" />
+          <img src="/public/star.svg" alt="Imagen de estrella" />
+          <img src="/public/star.svg" alt="Imagen de estrella" />
+          <img src="/public/star.svg" alt="Imagen de estrella" />
+        </div>
+        <textarea
+          name="comentario"
+          maxlength="500"
+          placeholder="Hola!, cual es tu opinion sobre este producto?"
+        ></textarea>
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+    <section class="producto"><!-- Imagen --></section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0.5rem;
+    gap: 9.375rem;
+    min-height: 55vh;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.0625rem;
+  }
+
+  form .stars img {
+    cursor: pointer;
+  }
+
+  form textarea {
+    width: 35.1875rem;
+    height: 15.0625rem;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+    resize: none;
+    font-size: clamp(20px, 3vw, 25px);
+    padding: 10px;
+  }
+
+  form input[type="submit"] {
+    width: 13.5625rem;
+    height: 3.125rem;
+    background: transparent;
+    font-size: 24px;
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  form input[type="submit"]:hover {
+    background: var(--color-primary);
+    color: #0d0d0d;
+  }
+
+  .producto {
+    width: 29.125rem;
+    height: 19.75rem;
+    background: var(--color-primary);
+  }
+</style>

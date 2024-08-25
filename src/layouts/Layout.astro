@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Descubre la mejor selección de ropa deportiva en Onyx Sports. Equípate con lo último de marcas top como Adidas y Nike. Ya sea para entrenar, competir o lucir un estilo casual, encuentra aquí la calidad y comodidad que necesitas. ¡Visítanos y eleva tu rendimiento con nuestras colecciones exclusivas!"
+    />
+    <link rel="icon" type="image/svg+xml" href="/public/logoPeque.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --color-primary: #D9D9D9;
+    --color-secundary: #ac142c;
+    --color-green: #13C204;
+    --color-green-unused: #13c20480;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Inter Variable", sans-serif;
+    background: #000;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  a {
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  input {
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+  }
+</style>

@@ -1,0 +1,123 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Carrito - Onyx">
+  <Header />
+  <main>
+    <section class="productos">
+      <span>Wow!, está muy vacio todo por acá</span>
+      <span style="font-weight: bold">Me ayudas a llenarlo?</span>
+      <a href="/">Explorar productos</a>
+    </section>
+    <section class="cuenta">
+      <div class="ticket">
+        <div class="info">
+            <span>Producto</span>
+            <span>$0</span>
+        </div>
+        <div class="info">
+            <span>Envio</span>
+            <span>$0</span>
+        </div>
+        <div class="info">
+            <span>Descuento</span>
+            <span>$0</span>
+        </div>
+        <div class="result">
+            <span>Total</span>
+            <span>$0</span>
+        </div>
+      </div>
+      <button class="btn">Comprar</button>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin-top: 3.0625rem;
+    min-height: 62vh;
+    margin: 10px;
+    gap: 6.3125rem;
+  }
+
+  .productos {
+    width: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.1875rem;
+    padding-top: 0.9375rem;
+    border-top: solid 2px var(--color-primary);
+  }
+
+  .productos span {
+    color: var(--color-primary);
+    font-size: 24px;
+  }
+  .productos a {
+    text-align: center;
+    background: var(--color-primary);
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 15px 0;
+    width: 26.0931rem;
+  }
+
+  .cuenta {
+    display: grid;
+    place-items: center;
+    gap: 0.625rem;
+  }
+
+  .ticket {
+    width: 29.4375rem;
+    height: 9.75rem;
+    border: solid 2px var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 1.25rem;
+  }
+
+  .ticket .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+
+  .ticket .result {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    border-top: solid 1px var(--color-primary);
+    padding-top: 0.625rem;
+  }
+
+  .cuenta button {
+    background: var(--color-green-unused);
+    border: none;
+    border-radius: 25px;
+    width: 17.3125rem;
+    height: 3.75rem;
+    font-size: 2em;
+    color: var(--color-primary);
+    cursor:not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+  }
+</style>

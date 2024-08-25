@@ -1,0 +1,89 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Añadir dirección - Onyx">
+  <Header />
+  <main>
+    <form action="#" method="post">
+      <div class="container-input">
+        <label for="nombreCompleto">
+          <span>Nombre completo</span>
+          <input type="text" id="nombreCompleto" />
+        </label>
+        <label for="codigoPostal">
+          <span>Código postal</span>
+          <input type="text" id="codigoPostal" />
+        </label>
+        <label for="calle">
+          <span>Calle</span>
+          <input type="text" id="calle" />
+        </label>
+        <label for="numero">
+          <span>Número</span>
+          <input type="number" id="numero" />
+        </label>
+        <label for="torre">
+          <span>Torre</span>
+          <input type="text" id="torre" />
+        </label>
+        <label for="dpto">
+          <span>Departamento</span>
+          <input type="text" id="dpto" />
+        </label>
+        <label for="piso">
+          <span>Piso</span>
+          <input type="text" id="piso" />
+        </label>
+      </div>
+      <div class="container-link">
+        <a href="/">Cancelar</a>
+        <input type="submit" value="Añadir dirección" />
+      </div>
+    </form>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  form {
+    max-width: 41.25rem;
+    min-height: 24.125rem;
+    background: var(--color-primary);
+    border-radius: 20px;
+    margin: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5625rem;
+  }
+
+  form .container-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  form .container-input input {
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 8.5px 15px;
+  }
+
+  form .container-link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  form .container-link input[type="submit"] {
+    border: none;
+    border-radius: none;
+    background: transparent;
+    font-size: 20px;
+  }
+</style>

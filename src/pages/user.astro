@@ -1,0 +1,171 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="User - Onyx">
+  <Header />
+  <nav>
+    <a href="/">
+      <img src="/public/Back.svg" alt="Imagen para ir atras" />
+    </a>
+    <h1>User name</h1>
+    <span>Cerrar sesión</span>
+  </nav>
+  <main>
+    <section>
+      <ul>
+        <li>
+          <label for="pass">Contraseña</label>
+          <div class="container-input">
+            <input type="password" name="pass" id="pass" />
+            <div class="item">
+              <img src="/public/EyeOff.svg" alt="Imagen de ojo cerrado" class="eye-off" />
+              <img src="/public/Edit.svg" alt="Imagen de editar" />
+            </div>
+          </div>
+        </li>
+        <li>
+          <label for="tel">Número de télefono</label>
+          <div class="container-input">
+            <input type="number" name="tel" id="tel" />
+            <div class="item">
+              <img src="/public/EyeOff.svg" alt="Imagen de ojo cerrado" />
+              <img src="/public/Edit.svg" alt="Imagen de editar" />
+            </div>
+          </div>
+        </li>
+        <li>
+          <label for="email">Correo electrónico</label>
+          <div class="container-input">
+            <input type="email" name="email" id="email" />
+            <div class="item">
+              <img src="/public/EyeOff.svg" alt="Imagen de ojo cerrado" />
+              <img src="/public/Edit.svg" alt="Imagen de editar" />
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a href="#" class="btn">Administrar direcciones</a>
+    </section>
+    <section class="metodoPago">
+      <a href="#">Agregar método de pago</a>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  nav h1 {
+    font-size: 32px;
+    color: var(--color-primary);
+  }
+
+  nav span {
+    cursor: pointer;
+    color: var(--color-secundary);
+  }
+
+  nav span:hover {
+    text-decoration: underline;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    min-height: 52vh;
+    margin: 1.25rem 2rem;
+  }
+
+  section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9375rem;
+  }
+
+  section ul li {
+    width: 28.5625rem;
+  }
+
+  section ul li label {
+    color: var(--color-primary);
+    font-size: 24px;
+  }
+
+  section ul li input {
+    width: 86%;
+    padding: 4px 0;
+    border: none;
+    border-radius: 5px;
+    margin-right: 12px;
+    font-size: 20px;
+  }
+
+  .item {
+    display: flex;
+    margin-top: 15px;
+    gap: 0.625rem;
+  }
+
+  .item img {
+    cursor: pointer;
+  }
+
+  .container-input {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    height: 3.8125rem;
+    background: var(--color-primary);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 23px 0;
+    transition: .3s;
+    border: 2px solid var(--color-primary);
+  }
+
+  .btn:hover {
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+  }
+
+  .metodoPago {
+    width: 41.25rem;
+    height: 24.125rem;
+    background: var(--color-primary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .metodoPago a {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+  }
+</style>

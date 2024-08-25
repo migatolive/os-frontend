@@ -1,0 +1,162 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Reclamos - Onyx">
+  <Header />
+  <main class="main">
+    <div class="main-content">
+      <section>
+        <h2>¿Cómo presentar un reclamo?</h2>
+        <ol>
+          <li>Formulario de contactos:</li>
+          <p>
+            Puedes presentar tu reclamo completando el formulario de contacto en
+            nuestro sitio web. Asegúrate de incluir todos los detalles
+            relevantes, como el número de pedido, la descripción del problema, y
+            cualquier otra información que consideres importante.
+          </p>
+
+          <li>Correo electrónico:</li>
+          <p>
+            Envía un correo electrónico a nuestro equipo de atención al cliente
+            a la dirección <span
+              style="text-decoration: underline; color: var(--color-secundary);"
+              >onyxsports@gmail.com</span
+            > con el asunto "Reclamo – [Número de Pedido]". En el mensaje, describe
+            tu problema de manera clara y adjunta cualquier documentación o imágenes
+            que puedan ayudarnos a resolver tu situación.
+          </p>
+
+          <li>Teléfono:</li>
+          <p>
+            También puedes comunicarte con nosotros llamando al +54 11 1234-5678
+            de lunes a viernes, de 9:00 a 18:00 hs. Uno de nuestros
+            representantes de servicio al cliente estará disponible para atender
+            tu reclamo.
+          </p>
+        </ol>
+      </section>
+      <section>
+        <h2>Proceso de gestión de reclamos</h2>
+        <ul>
+          <li>
+            <span style="font-weight: bold">Confirmación:</span> Una vez recibido
+            tu reclamo, te enviaremos una confirmación por correo electrónico dentro
+            de las 24 horas hábiles.
+          </li>
+          <li>
+            <span style="font-weight: bold">Evaluación:</span> Nuestro equipo evaluará
+            tu caso detalladamente. Esto puede incluir la revisión del producto en
+            cuestión, el análisis de la información proporcionada y, si es necesario,
+            la consulta con el fabricante.
+          </li>
+        </ul>
+      </section>
+      <div>
+        <img
+          src="../public/ShowMoreIcon.svg"
+          alt="Flecha que indica hacia abajo"
+          width="100"
+        />
+      </div>
+    </div>
+    <aside>
+      <h2>Indice</h2>
+      <ol>
+        <li>¿Cómo presentar un reclamo?</li>
+        <li>Proceso de gestión de reclamos</li>
+        <li>Plazos para presentar un reclamo</li>
+        <li>Autoridades competentes</li>
+        <li>Contacto para más información</li>
+      </ol>
+    </aside>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .main {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 5fr 1fr;
+    gap: 5.125rem;
+    width: 90%;
+    margin-top: 3.125rem;
+
+    & h2,
+    p,
+    label,
+    li {
+      color: var(--color-primary);
+    }
+
+    & .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3125rem;
+
+      section {
+        max-width: 735px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+
+        & h2 {
+          font-size: 32px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        & p {
+          margin: 20px 0 29px 0;
+          font-size: 20px;
+        }
+
+        & ol {
+          padding-left: 40px;
+
+          & li {
+            font-size: 24px;
+          }
+        }
+
+        & ul {
+          list-style: disc;
+          padding-left: 40px;
+
+          & li {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    & aside {
+      & h2 {
+        font-size: 32px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 13px;
+      }
+
+      & ol {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        min-width: 275px;
+        border: 1px solid var(--color-primary);
+        padding: 11px 5px 5px 1.875rem;
+
+        & li {
+          font-size: 16px;
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+</style>

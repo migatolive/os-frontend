@@ -1,0 +1,115 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Dirección - Onyx">
+  <Header />
+  <main>
+    <div class="container-domicilio">
+      <div class="domicilio">
+        <div class="info edificio">
+          <span>Torre: B02</span>
+          <span>Dpto: 25</span>
+          <span>Piso: 3</span>
+        </div>
+        <div class="info user">
+          <h2>Owner Name</h2>
+          <span>BST1587K</span>
+        </div>
+        <div class="info address">
+          <h2>A D D R E S S 1234</h2>
+          <a href="#">Editar</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-link">
+      <a href="#">Atras</a><a href="#">Agregar dirección</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    width: 41.25rem;
+    height: 24.125rem;
+    background: var(--color-primary);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main .container-domicilio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  main .container-domicilio .domicilio {
+    border: 3px solid #000;
+    width: 100%;
+    height: 5.625rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  main .container-domicilio .domicilio .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .edificio {
+    font-size: 16px;
+  }
+
+  .user h2{
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .user span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .address h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .address a {
+    display: block;
+    text-align: end;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .address a:hover {
+    text-decoration: underline;
+  }
+
+  main .container-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  main .container-link a {
+    font-size: 20px;
+  }
+
+  main .container-link a:hover {
+    text-decoration: underline;
+  }
+</style>

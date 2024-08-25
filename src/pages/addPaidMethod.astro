@@ -1,0 +1,86 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Añadir método de pago - Onyx">
+  <Header />
+  <main>
+    <div class="container-input">
+      <label for="cardNumber">Número de tarjeta</label>
+      <input type="number" id="cardNumber" name="cardNumber" maxlength="16" />
+      <label for="Cardholder">Titular de la tarjeta</label>
+      <input type="text" id="Cardholder" name="Cardholder" />
+      <label for="DNICardholder">DNI del titular de la tarjeta</label>
+      <input type="number" id="DNICardholder" name="DNICardholder" />
+      <label for="securityCode">Código de seguridad</label>
+      <input type="number" id="securityCode" name="securityCode" />
+      <label for="expirationDate">Fecha de expiración</label>
+      <input type="date" id="expirationDate" name="expirationDate" />
+    </div>
+    <div class="container-btn">
+      <button type="submit" class="btn-cancelar">Cancelar</button>
+      <button type="submit">Añadir método de pago</button>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    background: var(--color-primary);
+    border-radius: 20px;
+    width: 41.25rem;
+    min-height: 24.125rem;
+    padding: 20px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main .container-input {
+    display: grid;
+    gap: 10px;
+  }
+
+  main .container-input label {
+    font-size: 18px;
+  }
+
+  main .container-input input {
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    font-size: 18px;
+  }
+
+  main .container-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .container-btn button:hover {
+    text-decoration: underline;
+  }
+
+  .container-btn button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .container-btn {
+        flex-direction: column;
+    }
+
+    .btn-cancelar {
+      display: none;
+    }
+  }
+</style>
+)

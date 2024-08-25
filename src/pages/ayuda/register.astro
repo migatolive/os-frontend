@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Registro - Onyx">
+  <Header />
+  <main>
+    <form action="/login" method="post">
+      <h1>Registro</h1>
+      <div class="container">
+        <label for="text">
+          <span>Nombre del usuario</span>
+          <input type="text" id="text" name="nameUser" required />
+        </label>
+        <label for="pass">
+          <span>Contraseña</span>
+          <input type="password" id="pass" name="pass" required />
+        </label>
+        <label for="email">
+          <span>Correo electronico</span>
+          <input type="email" id="email" name="email" required />
+        </label>
+        <label for="repetPass">
+          <span>Repita contraseña</span>
+          <input type="password" id="repetPass" name="repetPass" required />
+        </label>
+      </div>
+      <input type="submit" value="Enviar" class="btn" />
+
+      <p>¿Ya tienes cuenta en Onyx? <a href="/login">Inicia sesión aquí</a></p>
+    </form>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+  }
+
+  form {
+    background: var(--color-primary);
+    max-width: 59.75rem;
+    min-height: 26.6875rem;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    padding: 1.25rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem 4.0625rem;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  input {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 24.0625rem;
+    margin-top: 7px;
+  }
+
+  input[type="submit"] {
+    margin: 0;
+    width: 21.25rem;
+    height: 3.5rem;
+    background: var(--color-secundary);
+    color: var(--color-primary);
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 16px;
+    max-width: 12.8125rem;
+    text-align: center;
+  }
+
+  a {
+    color: var(--color-secundary);
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      height: 77vh;
+    }
+
+    form {
+      gap: 1.25rem;
+      margin: 0 1rem;
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

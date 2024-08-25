@@ -1,0 +1,191 @@
+<script>
+  document.querySelector(".hamburger").addEventListener("click", () => {
+    const sidebar = document.querySelector(".sidebar");
+    const hamburgerIcon = document.querySelector(
+      ".hamburger img"
+    ) as HTMLImageElement;
+    const overlay = document.querySelector(".overlay");
+    const body = document.body;
+
+    // Cambia la imagen del ícono
+    if (sidebar.classList.contains("open")) {
+      hamburgerIcon.src = "../public/hamburger.svg";
+    } else {
+      hamburgerIcon.src = "../public/close.svg";
+    }
+
+    // Alterna la clase 'open' para mostrar/ocultar la barra lateral y overlay
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("active");
+    body.classList.toggle("no-scroll");
+  });
+</script>
+
+<header class="header">
+  <a href="/" class="container-logo">
+    <img class="logo" src="../public/Logo.png" alt="Logo Onyx Sports" />
+  </a>
+
+  <ul>
+    <li class="user-cart">
+      <a href="/login">
+        <img src="../public/User.svg" alt="Imagen del usuario" />
+        <span>Usuario</span>
+      </a>
+    </li>
+    <li class="user-cart">
+      <a href="/cart">
+        <img src="../public/Cart.svg" alt="Imagen del carrito" />
+        <span>Carrito</span>
+      </a>
+    </li>
+    <li class="hamburger">
+      <img src="../public/hamburger.svg" alt="Menú hamburguesa" />
+    </li>
+  </ul>
+</header>
+
+<div class="sidebar">
+  <ul>
+    <li>
+      <a href="/login">
+        <img src="../public/User.svg" alt="Imagen del usuario" />
+        <span>Usuario</span>
+      </a>
+    </li>
+    <li>
+      <a href="/cart">
+        <img src="../public/Cart.svg" alt="Imagen del carrito" />
+        <span>Carrito</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="overlay"></div>
+
+<style>
+  .header {
+    background: var(--color-primary);
+    width: 100%;
+    height: 15vh;
+    padding: 1.25rem 7.1875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container-logo {
+    height: 12vh;
+  }
+
+  .logo {
+    height: 100%;
+    width: auto;
+  }
+
+  ul {
+    display: flex;
+    gap: 2.1875rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 1.25rem 1rem;
+    }
+
+    .user-cart {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    /* Estilos para la barra lateral */
+    .sidebar {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 57%;
+      height: 100%;
+      background-color: #ac142c;
+      transition: right 0.5s ease-in-out;
+      padding: 2rem;
+      z-index: 3;
+    }
+
+    .sidebar.open {
+      right: 0;
+    }
+
+    .sidebar ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 10.625rem;
+    }
+
+    .sidebar ul li a {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+    }
+
+    .sidebar ul li span {
+      font-size: 1.25em;
+    }
+
+    .sidebar ul li img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    /* Estilos para el overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: right 0.3s ease-in-out;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .overlay.active {
+      transition: right 0.3s ease-in-out;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+</style>

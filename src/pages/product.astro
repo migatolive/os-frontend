@@ -1,0 +1,254 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Onyx Sports - Inicio">
+    <Header />
+    <main>
+        <section class="containerPrin">
+            <div class="imgsComtainer">
+                <div class="carrousel">
+                    <div class="arrow" id="left">
+                        <img src="../public/leftArrow.svg" alt="" />
+                    </div>
+                    <div class="imgContainer">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="arrow" id="right">
+                        <img src="../public/rightArrow.svg" alt="" />
+                    </div>
+                </div>
+                <div class="carrousel">
+                    <div class="arrow" id="left">
+                        <img src="../public/leftArrow.svg" alt="" />
+                    </div>
+                    <div class="tinyImgsContainer">
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                    </div>
+                    <div class="arrow" id="right">
+                        <img src="../public/rightArrow.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="prinContainer">
+                <h1>Product Name</h1>
+                <div class="sizes"></div>
+                <div class="toBuy">
+                    <article class="ratingPrice">
+                        <div class="stars">
+                            <img src="/public/star.svg" alt="" class="star" />
+                            <img src="/public/star.svg" alt="" class="star" />
+                            <img src="/public/star.svg" alt="" class="star" />
+                            <img src="/public/star.svg" alt="" class="star" />
+                            <img src="/public/star.svg" alt="" class="star" />
+                        </div>
+                        <p class="ratingNumber">0.0</p>
+                        <p class="price">$</p>
+                    </article>
+                    <button class="buyButton">Comprar</button>
+                    <p class="addCart">Añadir al carrito</p>
+                </div>
+            </div>
+        </section>
+        <section class="containerExtra">
+            <article class="infos">
+                <h1>Acerca del Producto</h1>
+                <div class="info" id="description">
+                    <h2>Descripción:</h2>
+                    <p class="content"></p>
+                </div>
+                <div class="info" id="details">
+                    <h2>Detalles:</h2>
+                    <p class="content"></p>
+                </div>
+                <div class="info" id="safes">
+                    <h2>Instrucciones de lavado</h2>
+                    <p class="content"></p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    body {
+        display: grid;
+        align-content: center;
+    }
+
+    main {
+        margin: 2vh 0;
+        height: auto;
+        width: 95%;
+        border: solid 3px var(--color-primary);
+        display: grid;
+    }
+
+    h1 {
+        position: relative;
+        top: 3vh;
+        color: var(--color-primary);
+        display: inline-block;
+    }
+
+    .containerPrin {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+
+    .imgsComtainer {
+        position: relative;
+        height: 80vh;
+        width: 35rem;
+        display: grid;
+        grid-template-rows: 80% 20%;
+    }
+
+    .carrousel {
+        display: inline-grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+    }
+
+    .arrow {
+        height: fit-content;
+    }
+
+    .imgComtainer {
+        background-color: var(--color-primary);
+        height: fit-content;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .imgComtainer img {
+        border: solid 2px white;
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .tinyImgsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-content: center;
+    }
+
+    .tinyImgsContainer img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #left {
+        position: relative;
+        float: left;
+    }
+
+    #right {
+        position: relative;
+        float: right;
+    }
+
+    .prinContainer {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 15% 55% 30%;
+        justify-items: center;
+    }
+
+    .sizes {
+        border: solid 2px white;
+        width: 90%;
+        overflow: scroll;
+    }
+
+    .sizes::-webkit-scrollbar {
+        display: none;
+    }
+
+    .toBuy {
+        display: grid;
+        align-content: space-around;
+        justify-content: center;
+        width: auto;
+        grid-template-rows: 20% 30% 20%;
+    }
+
+    .buyButton {
+        background-color: var(--color-green);
+        width: 40rem;
+        height: 100%;
+        border: none;
+        border-radius: 3rem;
+        color: var(--color-primary);
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .ratingPrice {
+        display: inline;
+        align-items: center;
+        width: 40rem;
+        align-content: center;
+    }
+
+    .stars {
+        height: 2.5vh;
+        display: inline-block;
+    }
+
+    .star {
+        height: 100%;
+    }
+
+    .ratingNumber {
+        position: relative;
+        left: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .price {
+        position: relative;
+        top: 0.1rem;
+        float: right;
+        font-size: 1.3rem;
+    }
+
+    .addCart,
+    .ratingNumber,
+    .price {
+        color: var(--color-primary);
+        display: inline-block;
+    }
+
+    .addCart {
+        width: fit-content;
+        justify-self: center;
+        cursor: pointer;
+    }
+
+    .containerExtra {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+
+    .infos {
+        color: var(--color-primary);
+        display: grid;
+        grid-template-rows: 10% auto auto auto;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .infos h1 {
+        display: inline-block;
+    }
+</style>
